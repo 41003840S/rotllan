@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Rotllan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Navigation Drawer -->
+    <string name="pestana_uno">Todos los productos</string>
+    <string name="denominacion_origen">Denominación de origen</string>
+    <string name="sin_denominacion_origen">Sin denominación de origen</string>
+    <string name="pestana_dos">Priorat</string>
+    <string name="pestana_tres">Rioja</string>
+    <string name="pestana_cuatro">Rias baixas</string>
+    <string name="pestana_cinco">Cava</string>
+    <string name="pestana_seis">Cataluña</string>
+    <string name="varios">Varios</string>
+    <string name="comunicacion">Comunicación</string>
+    <string name="contacto">Contacto</string>
+    <string name="title_activity_priorat">PrioratActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_contacto">ContactoActivity</string>
+
+    <!-- Contacto Activity -->
+    <string name="nombre_jordi">Jordi Rotllan Torra</string>
+    <string name="cargo">CEO Rotllan Torra SL</string>
+    <string name="telefono">Teléfono: </string>
+    <string name="numero_telefono">+34 93 313 43 47</string>
+    <string name="web">Web: </string>
+    <string name="pagina_web">www.ovinea.com</string>
+
+    <string-array
+        name="array_nombre_vinos">
+        <item>Vino 1</item>
+        <item>Vino 2</item>
+    </string-array>
+
+    <string-array
+        name="array_descripcion_vinos">
+        <item>Descripcion 1</item>
+        <item>Descripcion 2</item>
+    </string-array>
+
+    <string-array
+        name="array_anada_vinos">
+        <item>1990</item>
+        <item>1991</item>
+    </string-array>
+
+
+</resources>
