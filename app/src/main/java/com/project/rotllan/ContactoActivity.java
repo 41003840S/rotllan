@@ -25,6 +25,9 @@ public class ContactoActivity extends AppCompatActivity {
     @Bind(R.id.thumbnail)   ImageView photo;
     @Bind(R.id.cardTlf)     CardView cardTlf;
     @Bind(R.id.cardWeb)     CardView cardWeb;
+    @Bind(R.id.cardMap)     CardView cardMap;
+    @Bind(R.id.fab)         ImageView fab;
+    @Bind(R.id.mapa_google) ImageView imageMap;
 
     Intent intent;
 
@@ -70,6 +73,31 @@ public class ContactoActivity extends AppCompatActivity {
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
+            }
+        });
+
+        cardMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String strUri = "http://maps.google.com/maps?q=loc:" + ( 41.425047) + "," +  2.201479 + " (" + "Rotllan Torra" + ")";
+                intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(strUri));
+                intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+
+                startActivity(intent);
+            }
+        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // TODO cambiar mail de destino
+                Intent Email = new Intent(Intent.ACTION_SEND);
+                Email.setType("text/email");
+                Email.putExtra(Intent.EXTRA_EMAIL,
+                        new String[]{"comercial@rotllantorra.com"});
+                startActivity(Intent.createChooser(Email, "Send Feedback:"));
             }
         });
 
