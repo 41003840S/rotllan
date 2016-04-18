@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(this, PrioratActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_rioja) {
-
+            intent = new Intent(this, RiojaActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_rias) {
 
         } else if (id == R.id.nav_cava) {

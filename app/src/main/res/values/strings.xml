@@ -17,7 +17,8 @@
     <string name="varios">Varios</string>
     <string name="comunicacion">Comunicación</string>
     <string name="contacto">Contacto</string>
-    <string name="title_activity_priorat">PrioratActivity</string>
+    <string name="title_activity_priorat">Priorat</string>
+    <string name="title_activity_rioja">Rioja</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_contacto">ContactoActivity</string>
 
@@ -29,48 +30,71 @@
     <string name="web">Web: </string>
     <string name="pagina_web">www.ovinea.com</string>
 
-
     <!--           PRIORAT              -->
-    <string-array
-        name="array_nombre_priorats">
+    <string-array name="array_nombre_priorats">
         <item>Mistik Crianza</item>
         <item>Mistik Reserva</item>
     </string-array>
 
-    <string-array
-        name="array_anada_priorats">
+    <string-array name="array_anada_priorats">
         <item>2012</item>
         <item>2010</item>
     </string-array>
 
-    <string-array
-        name="array_coupatge_priorats">
+    <string-array name="array_coupatge_priorats">
         <item>45% Garnacha\n45% Mazuelo\n10% Cabernet Sauvignon
         </item>
         <item>45% Garnacha\n45% Mazuelo\n10% Cabernet Sauvignon</item>
     </string-array>
 
-    <string-array
-        name="array_graualco_priorats">
+    <string-array name="array_graualco_priorats">
         <item>13,5% vol.</item>
         <item>13,5% vol.</item>
     </string-array>
 
-
-    <string-array
-        name="array_descripcion_priorats">
+    <string-array name="array_descripcion_priorats">
         <item>Mistik es un vino elaborado a mano desde el primer momento del proceso. Es un vino de mucha calidad, al tener una excelente relación calidad precio hace que su rotación sea muy alta.\nAsí pues se pueden adquirir a precios muy competitivos.\nNo son vinos que se queden en lo lineal.\nVisualmente son muy atractivos y llaman la atención del consumidor</item>
         <item>Mistik es un vino elaborado a mano desde el primer momento del proceso. Es un vino de mucha calidad, al tener una excelente relación calidad precio hace que su rotación sea muy alta.\nAsí pues se pueden adquirir a precios muy competitivos.\nNo son vinos que se queden en lo lineal.\nVisualmente son muy atractivos y llaman la atención del consumidor</item>
     </string-array>
 
-    <string-array
-        name="array_anada_vinos">
+
+    <!--           RIOJA              -->
+    <string-array name="array_nombre_rioja">
+        <item>Aribau Cuvée Crianza</item>
+        <item>Aribau Cuvée Reserva</item>
+    </string-array>
+
+    <string-array name="array_anada_rioja">
+        <item>2013</item>
+        <item>2010</item>
+    </string-array>
+
+    <string-array name="array_coupatge_rioja">
+        <item>85% Tempranillo\n10% Mazuelo\n5% Mazuelo
+        </item>
+        <item>85% Tempranillo\n10% Mazuelo\n5% Mazuelo</item>
+    </string-array>
+
+    <string-array name="array_graualco_rioja">
+        <item>13,5% vol.</item>
+        <item>13,5% vol.</item>
+    </string-array>
+
+    <string-array name="array_descripcion_rioja">
+        <item>Bello color picota intenso con el ribete de un ligero color teja y de buena intensidad, aromas de fruta roja, mentolados, cacao, minerales y maderas aromáticas. Potente y amplio muy bien estructurado, aromático y fresco. Su bouquet revela notas de frutas negras y especias dulces que se mezclan con una fina madera. En boca es carnoso, muy persistente en boca, resaltando la elegancia y finura de este gran vino. Tiene una vía retronasal larga. Tiene una larga vida.</item>
+        <item>Bello color picota intenso con el ribete de un ligero color teja y de buena intensidad, aromas de fruta roja, mentolados, cacao, minerales y maderas aromáticas. Potente y amplio muy bien estructurado, aromático y fresco. Su bouquet revela notas de frutas negras y especias dulces que se mezclan con una fina madera. En boca es carnoso, muy persistente en boca, resaltando la elegancia y finura de este gran vino. Tiene una vía retronasal larga. Tiene una larga vida.</item>
+    </string-array>
+
+
+
+<!--    <string-array name="array_anada_vinos">
         <item>1990</item>
         <item>1991</item>
-    </string-array>
+    </string-array>-->
 
     <string name="coupage">Coupage</string>
     <string name="graduacion">Graduación</string>
+
 
 
 </resources>

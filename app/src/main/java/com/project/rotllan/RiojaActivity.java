@@ -1,5 +1,7 @@
 package com.project.rotllan;
 
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -21,7 +23,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.Arrays;
 
-public class PrioratActivity extends AppCompatActivity {
+public class RiojaActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -41,7 +43,7 @@ public class PrioratActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_priorat);
+        setContentView(R.layout.activity_rioja);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -54,23 +56,13 @@ public class PrioratActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-
-/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_priorat, menu);
+        getMenuInflater().inflate(R.menu.menu_rioja, menu);
         return true;
     }
 
@@ -118,17 +110,18 @@ public class PrioratActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_priorat, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_rioja, container, false);
 
             posicion = getArguments().getInt(ARG_SECTION_NUMBER);
             int posicion2 = posicion - 1;
 
-            TextView nombre = (TextView) rootView.findViewById(R.id.nombrePriorats);
-            TextView ano = (TextView) rootView.findViewById(R.id.anoPriorats);
-            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgePriorats);
-            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionPriorats);
-            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoPriorats);
-            TextView grado = (TextView) rootView.findViewById(R.id.gradosPriorat);
+
+            TextView nombre = (TextView) rootView.findViewById(R.id.nombreRiojas);
+            TextView ano = (TextView) rootView.findViewById(R.id.anoRiojas);
+            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeRiojas);
+            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionRiojas);
+            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoRiojas);
+            TextView grado = (TextView) rootView.findViewById(R.id.gradosRiojas);
 
             ImageView logo1 = (ImageView) rootView.findViewById(R.id.logo1);
             ImageView logo2 = (ImageView) rootView.findViewById(R.id.logo2);
@@ -137,11 +130,11 @@ public class PrioratActivity extends AppCompatActivity {
             ImageView logo5 = (ImageView) rootView.findViewById(R.id.logo5);
             ImageView logo6 = (ImageView) rootView.findViewById(R.id.logo6);
 
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_priorats);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_priorats);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_priorats);
-            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_priorats);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_priorats);
+            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_rioja);
+            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_rioja);
+            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_rioja);
+            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_rioja);
+            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_rioja);
 
             nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
             ano.setText(Arrays.asList(arrayAnos).get(posicion2));
@@ -187,9 +180,9 @@ public class PrioratActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Mistik Crianza";
+                    return "Aribau Cuvée Crianza";
                 case 1:
-                    return "Mistik Reserva";
+                    return "Aribau Cuvée Reserva";
             }
             return null;
         }
