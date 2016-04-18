@@ -29,16 +29,38 @@
     <string name="web">Web: </string>
     <string name="pagina_web">www.ovinea.com</string>
 
+
+    <!--           PRIORAT              -->
     <string-array
-        name="array_nombre_vinos">
-        <item>Vino 1</item>
-        <item>Vino 2</item>
+        name="array_nombre_priorats">
+        <item>Mistik Crianza</item>
+        <item>Mistik Reserva</item>
     </string-array>
 
     <string-array
-        name="array_descripcion_vinos">
-        <item>Descripcion 1</item>
-        <item>Descripcion 2</item>
+        name="array_anada_priorats">
+        <item>2012</item>
+        <item>2010</item>
+    </string-array>
+
+    <string-array
+        name="array_coupatge_priorats">
+        <item>45% Garnacha\n45% Mazuelo\n10% Cabernet Sauvignon
+        </item>
+        <item>45% Garnacha\n45% Mazuelo\n10% Cabernet Sauvignon</item>
+    </string-array>
+
+    <string-array
+        name="array_graualco_priorats">
+        <item>13,5% vol.</item>
+        <item>13,5% vol.</item>
+    </string-array>
+
+
+    <string-array
+        name="array_descripcion_priorats">
+        <item>Mistik es un vino elaborado a mano desde el primer momento del proceso. Es un vino de mucha calidad, al tener una excelente relación calidad precio hace que su rotación sea muy alta.\nAsí pues se pueden adquirir a precios muy competitivos.\nNo son vinos que se queden en lo lineal.\nVisualmente son muy atractivos y llaman la atención del consumidor</item>
+        <item>Mistik es un vino elaborado a mano desde el primer momento del proceso. Es un vino de mucha calidad, al tener una excelente relación calidad precio hace que su rotación sea muy alta.\nAsí pues se pueden adquirir a precios muy competitivos.\nNo son vinos que se queden en lo lineal.\nVisualmente son muy atractivos y llaman la atención del consumidor</item>
     </string-array>
 
     <string-array
@@ -46,6 +68,9 @@
         <item>1990</item>
         <item>1991</item>
     </string-array>
+
+    <string name="coupage">Coupage</string>
+    <string name="graduacion">Graduación</string>
 
 
 </resources>

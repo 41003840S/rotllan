@@ -16,7 +16,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.Arrays;
 
 public class PrioratActivity extends AppCompatActivity {
 
@@ -52,14 +57,14 @@ public class PrioratActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
     }
 
@@ -95,6 +100,7 @@ public class PrioratActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        int posicion;
 
         public PlaceholderFragment() {
         }
@@ -115,8 +121,46 @@ public class PrioratActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_priorat, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            posicion = getArguments().getInt(ARG_SECTION_NUMBER);
+            int posicion2 = posicion - 1;
+
+            TextView nombre = (TextView) rootView.findViewById(R.id.nombrePriorats);
+            TextView ano = (TextView) rootView.findViewById(R.id.anoPriorats);
+            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgePriorats);
+            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionPriorats);
+            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoPriorats);
+            TextView grado = (TextView) rootView.findViewById(R.id.gradosPriorat);
+
+            ImageView logo1 = (ImageView) rootView.findViewById(R.id.logo1);
+            ImageView logo2 = (ImageView) rootView.findViewById(R.id.logo2);
+            ImageView logo3 = (ImageView) rootView.findViewById(R.id.logo3);
+            ImageView logo4 = (ImageView) rootView.findViewById(R.id.logo4);
+            ImageView logo5 = (ImageView) rootView.findViewById(R.id.logo5);
+            ImageView logo6 = (ImageView) rootView.findViewById(R.id.logo6);
+
+            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_priorats);
+            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_priorats);
+            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_priorats);
+            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_priorats);
+            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_priorats);
+
+            nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
+            ano.setText(Arrays.asList(arrayAnos).get(posicion2));
+            coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
+            descripcion.setText(Arrays.asList(arrayDescripcion).get(posicion2));
+            Glide.with(this).load(R.drawable.vinoprueba).into(foto);
+            grado.setText(Arrays.asList(arrayGrados).get(posicion2));
+            Glide.with(this).load(R.drawable.pollo).into(logo1);
+            Glide.with(this).load(R.drawable.carne).into(logo2);
+            Glide.with(this).load(R.drawable.jamon).into(logo3);
+            Glide.with(this).load(R.drawable.pato).into(logo4);
+            Glide.with(this).load(R.drawable.pescado).into(logo5);
+            Glide.with(this).load(R.drawable.cheese).into(logo6);
+
+
+
+            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }
