@@ -48,6 +48,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rotllan.MainActivity" />
         </activity>
+        <activity
+            android:name=".CatalunyaActivity"
+            android:label="@string/title_activity_catalunya"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rotllan.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CavaActivity"
+            android:label="@string/title_activity_cava"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rotllan.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_cava) {
 
         } else if (id == R.id.nav_cat) {
-
+            intent = new Intent(this, CatalunyaActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_noDO) {
 
         } else if (id == R.id.nav_contacto) {

@@ -1,5 +1,7 @@
 package com.project.rotllan;
 
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -21,7 +23,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.Arrays;
 
-public class RiojaActivity extends AppCompatActivity {
+public class CatalunyaActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -41,7 +43,7 @@ public class RiojaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rioja);
+        setContentView(R.layout.activity_catalunya);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -54,13 +56,23 @@ public class RiojaActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_rioja, menu);
+        getMenuInflater().inflate(R.menu.menu_catalunya, menu);
         return true;
     }
 
@@ -108,18 +120,17 @@ public class RiojaActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_rioja, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_catalunya, container, false);
 
             posicion = getArguments().getInt(ARG_SECTION_NUMBER);
             int posicion2 = posicion - 1;
 
-
-            TextView nombre = (TextView) rootView.findViewById(R.id.nombreRiojas);
-            TextView ano = (TextView) rootView.findViewById(R.id.anoRiojas);
-            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeRiojas);
-            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionRiojas);
-            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoRiojas);
-            TextView grado = (TextView) rootView.findViewById(R.id.gradosRiojas);
+            TextView nombre = (TextView) rootView.findViewById(R.id.nombreCatalunya);
+            TextView ano = (TextView) rootView.findViewById(R.id.anoCatalunya);
+            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeCatalunya);
+            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionCatalunya);
+            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoCatalunya);
+            TextView grado = (TextView) rootView.findViewById(R.id.gradosCatalunya);
 
             ImageView logo1 = (ImageView) rootView.findViewById(R.id.logo1);
             ImageView logo2 = (ImageView) rootView.findViewById(R.id.logo2);
@@ -128,12 +139,12 @@ public class RiojaActivity extends AppCompatActivity {
             ImageView logo5 = (ImageView) rootView.findViewById(R.id.logo5);
             ImageView logo6 = (ImageView) rootView.findViewById(R.id.logo6);
 
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_rioja);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_rioja);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_rioja);
-            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_rioja);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_rioja);
-            int[] imagenes = {R.drawable.riojacrianza, R.drawable.riojareserva};
+            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_catalunya);
+            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_catalunya);
+            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_catalunya);
+            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_catalunya);
+            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_catalunya);
+            int[] imagenes = {R.drawable.ressotinto,R.drawable.ressoblanco};
 
             nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
             ano.setText(Arrays.asList(arrayAnos).get(posicion2));
@@ -179,9 +190,9 @@ public class RiojaActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Aribau Cuvée Crianza";
+                    return "Resso Tinto";
                 case 1:
-                    return "Aribau Cuvée Reserva";
+                    return "Resso Blanco";
             }
             return null;
         }

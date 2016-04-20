@@ -19,6 +19,7 @@
     <string name="contacto">Contacto</string>
     <string name="title_activity_priorat">Priorat</string>
     <string name="title_activity_rioja">Rioja</string>
+    <string name="title_activity_catalunya">Catalunya</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_contacto">ContactoActivity</string>
 
@@ -70,8 +71,7 @@
     </string-array>
 
     <string-array name="array_coupatge_rioja">
-        <item>85% Tempranillo\n10% Mazuelo\n5% Mazuelo
-        </item>
+        <item>85% Tempranillo\n10% Mazuelo\n5% Mazuelo</item>
         <item>85% Tempranillo\n10% Mazuelo\n5% Mazuelo</item>
     </string-array>
 
@@ -86,15 +86,62 @@
     </string-array>
 
 
+    <!--           CATALUNYA              -->
+    <string-array name="array_nombre_catalunya">
+        <item>Ressó Tinto</item>
+        <item>Ressó Blanco</item>
+    </string-array>
 
-<!--    <string-array name="array_anada_vinos">
-        <item>1990</item>
-        <item>1991</item>
-    </string-array>-->
+    <string-array name="array_anada_catalunya">
+        <item>Seco</item>
+        <item>Seco</item>
+    </string-array>
 
+    <string-array name="array_coupatge_catalunya">
+        <item>80% Garnacha\n20% Tempranillo\n5% Mazuelo</item>
+        <item>100% Garnacha blanca</item>
+    </string-array>
+
+    <string-array name="array_graualco_catalunya">
+        <item>14% vol.</item>
+        <item>13,5% vol.</item>
+    </string-array>
+
+    <string-array name="array_descripcion_catalunya">
+        <item>Tiene una entrada muy suave, fresco y mineral. Claro y persistente. Apropiado para todas las carnes blancas y rojas. Ideal para platos con arroz, las carnes rojas y los semi curados o quesos curados.</item>
+        <item>Tiene una entrada muy suave, fresco y mineral. Claro y persistente. Apropiado para todas las carnes blancas y rojas. Ideal para platos con arroz, las carnes rojas y los semi curados o quesos curados.</item>
+    </string-array>
+
+
+    <!--  <string-array name="array_nombre_catalunya">
+        <item>Ressó Tinto</item>
+        <item>Ressó Blanco</item>
+    </string-array>
+
+    <string-array name="array_anada_catalunya">
+        <item>Seco</item>
+        <item>Seco</item>
+    </string-array>
+
+    <string-array name="array_coupatge_catalunya">
+        <item>80% Garnacha 25% Tempranillo</item>
+        <item>100% Garnacha blanca</item>
+    </string-array>
+
+    <string-array name="array_graualco_catalunya">
+        <item>14%</item>
+        <item>13,5%</item>
+    </string-array>
+
+    <string-array name="array_descripcion_catalunya">
+        <item>Tiene una entrada muy suave, fresco y mineral. Claro y persistente. Apropiado para todas las carnes blancas y rojas. Ideal para platos con arroz, las carnes rojas y los semi curados o quesos curados.</item>
+        <item>Bien estructurado, intenso, carnoso y complejo. Ataque dulce con notas tropicales, florales y cítricas. Apropiado para cualquier tipo de pescado, carnes blancas, arroces y con un acabado ideal para acompañar quesos semi curados.</item>
+    </string-array>
+
+-->
     <string name="coupage">Coupage</string>
     <string name="graduacion">Graduación</string>
-
+    <string name="title_activity_cava">CavaActivity</string>
 
 
 </resources>

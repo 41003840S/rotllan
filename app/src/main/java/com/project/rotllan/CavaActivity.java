@@ -1,5 +1,7 @@
 package com.project.rotllan;
 
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -14,14 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
-import java.util.Arrays;
-
-public class RiojaActivity extends AppCompatActivity {
+public class CavaActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -41,7 +38,7 @@ public class RiojaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rioja);
+        setContentView(R.layout.activity_cava);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -54,13 +51,23 @@ public class RiojaActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_rioja, menu);
+        getMenuInflater().inflate(R.menu.menu_cava, menu);
         return true;
     }
 
@@ -88,7 +95,6 @@ public class RiojaActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
-        int posicion;
 
         public PlaceholderFragment() {
         }
@@ -108,46 +114,9 @@ public class RiojaActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_rioja, container, false);
-
-            posicion = getArguments().getInt(ARG_SECTION_NUMBER);
-            int posicion2 = posicion - 1;
-
-
-            TextView nombre = (TextView) rootView.findViewById(R.id.nombreRiojas);
-            TextView ano = (TextView) rootView.findViewById(R.id.anoRiojas);
-            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeRiojas);
-            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionRiojas);
-            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoRiojas);
-            TextView grado = (TextView) rootView.findViewById(R.id.gradosRiojas);
-
-            ImageView logo1 = (ImageView) rootView.findViewById(R.id.logo1);
-            ImageView logo2 = (ImageView) rootView.findViewById(R.id.logo2);
-            ImageView logo3 = (ImageView) rootView.findViewById(R.id.logo3);
-            ImageView logo4 = (ImageView) rootView.findViewById(R.id.logo4);
-            ImageView logo5 = (ImageView) rootView.findViewById(R.id.logo5);
-            ImageView logo6 = (ImageView) rootView.findViewById(R.id.logo6);
-
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_rioja);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_rioja);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_rioja);
-            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_rioja);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_rioja);
-            int[] imagenes = {R.drawable.riojacrianza, R.drawable.riojareserva};
-
-            nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
-            ano.setText(Arrays.asList(arrayAnos).get(posicion2));
-            coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
-            descripcion.setText(Arrays.asList(arrayDescripcion).get(posicion2));
-            Glide.with(this).load(imagenes[posicion2]).into(foto);
-            grado.setText(Arrays.asList(arrayGrados).get(posicion2));
-            Glide.with(this).load(R.drawable.pollo).into(logo1);
-            Glide.with(this).load(R.drawable.carne).into(logo2);
-            Glide.with(this).load(R.drawable.jamon).into(logo3);
-            Glide.with(this).load(R.drawable.pato).into(logo4);
-            Glide.with(this).load(R.drawable.pescado).into(logo5);
-            Glide.with(this).load(R.drawable.cheese).into(logo6);
-
+            View rootView = inflater.inflate(R.layout.fragment_cava, container, false);
+            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }
@@ -171,17 +140,19 @@ public class RiojaActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
-            return 2;
+            // Show 3 total pages.
+            return 3;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Aribau Cuvée Crianza";
+                    return "SECTION 1";
                 case 1:
-                    return "Aribau Cuvée Reserva";
+                    return "SECTION 2";
+                case 2:
+                    return "SECTION 3";
             }
             return null;
         }
