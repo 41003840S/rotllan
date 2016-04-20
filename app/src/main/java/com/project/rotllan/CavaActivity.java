@@ -16,7 +16,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.Arrays;
 
 public class CavaActivity extends AppCompatActivity {
 
@@ -50,16 +55,6 @@ public class CavaActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
     }
 
@@ -95,6 +90,7 @@ public class CavaActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        int posicion;
 
         public PlaceholderFragment() {
         }
@@ -115,8 +111,37 @@ public class CavaActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_cava, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            posicion = getArguments().getInt(ARG_SECTION_NUMBER);
+            int posicion2 = posicion - 1;
+
+            TextView nombre = (TextView) rootView.findViewById(R.id.nombreCavas);
+            TextView ano = (TextView) rootView.findViewById(R.id.anoCavas);
+            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeCavas);
+            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoCavas);
+            TextView grado = (TextView) rootView.findViewById(R.id.gradosCavas);
+            TextView aroma = (TextView) rootView.findViewById(R.id.aromasCava);
+            TextView color = (TextView) rootView.findViewById(R.id.coloresCava);
+            TextView sabor = (TextView) rootView.findViewById(R.id.saboresCava);
+
+            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_cavas);
+            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_cavas);
+            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_cavas);
+            String[] arrayColores = getResources().getStringArray(R.array.array_color_cavas);
+            String[] arrayAromas = getResources().getStringArray(R.array.array_aroma_cavas);
+            String[] arraySabores = getResources().getStringArray(R.array.array_sabor_cavas);
+            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_cavas);
+            int[] imagenes = {R.drawable.cavapalasbrut,R.drawable.cavapalacebutnature};
+
+            nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
+            ano.setText(Arrays.asList(arrayAnos).get(posicion2));
+            coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
+            grado.setText(Arrays.asList(arrayGrados).get(posicion2));
+            color.setText(Arrays.asList(arrayColores).get(posicion2));
+            aroma.setText(Arrays.asList(arrayAromas).get(posicion2));
+            sabor.setText(Arrays.asList(arraySabores).get(posicion2));
+            Glide.with(this).load(imagenes[posicion2]).into(foto);
+
             return rootView;
         }
     }
@@ -140,19 +165,17 @@ public class CavaActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 2 total pages.
+            return 2;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Cava Brut";
                 case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
+                    return "Cava Brut Nature";
             }
             return null;
         }

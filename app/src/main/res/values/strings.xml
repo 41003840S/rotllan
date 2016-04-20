@@ -17,11 +17,14 @@
     <string name="varios">Varios</string>
     <string name="comunicacion">Comunicación</string>
     <string name="contacto">Contacto</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--Nombre de las activities -->
     <string name="title_activity_priorat">Priorat</string>
     <string name="title_activity_rioja">Rioja</string>
+    <string name="title_activity_cava">Cava</string>
     <string name="title_activity_catalunya">Catalunya</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_contacto">ContactoActivity</string>
+    <string name="title_activity_contacto">Contacto</string>
 
     <!-- Contacto Activity -->
     <string name="nombre_jordi">Jordi Rotllan Torra</string>
@@ -30,6 +33,7 @@
     <string name="numero_telefono">+34 93 313 43 47</string>
     <string name="web">Web: </string>
     <string name="pagina_web">www.ovinea.com</string>
+
 
     <!--           PRIORAT              -->
     <string-array name="array_nombre_priorats">
@@ -113,6 +117,68 @@
     </string-array>
 
 
+    <!--           CAVAS              -->
+    <string-array name="array_nombre_cavas">
+        <item>Gran Palas</item>
+        <item>Gran Palas</item>
+    </string-array>
+
+    <string-array name="array_anada_cavas">
+        <item>Brut</item>
+        <item>Brut Nature</item>
+    </string-array>
+
+    <string-array name="array_coupatge_cavas">
+        <item>30% Macabeo\n30% Charelo\n40% Parellada</item>
+        <item>30% Macabeo\n30% Charelo\n40% Parellada</item>
+    </string-array>
+
+    <string-array name="array_graualco_cavas">
+        <item>11,5% vol.</item>
+        <item>11,5% vol.</item>
+    </string-array>
+
+    <string-array name="array_cosecha_cavas">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_primera_fermentacion">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_segunda_fermentacion">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_color_cavas">
+        <item>Amarillo pálido con tonos dorados. Limpio y brillante.</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_aroma_cavas">
+        <item>Limpio con fuerza media en nariz. Elegante y afrutado.</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_sabor_cavas">
+        <item>Buen balance en boca. Sabroso, con dulzura apropiada, muy suave y fresco. Excelente persistencia en perdida de burbujas.</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_como_servir">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_cuando_servir">
+        <item></item>
+        <item></item>
+    </string-array>
+
+
     <!--  <string-array name="array_nombre_catalunya">
         <item>Ressó Tinto</item>
         <item>Ressó Blanco</item>
@@ -141,7 +207,9 @@
 -->
     <string name="coupage">Coupage</string>
     <string name="graduacion">Graduación</string>
-    <string name="title_activity_cava">CavaActivity</string>
-
+    <string name="cosecha">Cosecha</string>
+    <string name="color">Color</string>
+    <string name="aroma">Aroma</string>
+    <string name="sabor">Sabor</string>
 
 </resources>
