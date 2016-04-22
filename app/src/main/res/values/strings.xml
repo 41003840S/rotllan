@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Rotllan</string>
 
+    <!-- APP -->
+    <string name="app_name">Rotllan</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu -->
     <string name="action_settings">Settings</string>
 
     <!-- Navigation Drawer -->
@@ -17,6 +20,8 @@
     <string name="varios">Varios</string>
     <string name="comunicacion">Comunicación</string>
     <string name="contacto">Contacto</string>
+
+    <!-- Tabbed Activity -->
     <string name="section_format">Hello World from section: %1$d</string>
 
     <!--Nombre de las activities -->
@@ -176,8 +181,7 @@
         <item>En comidas. Ideal para todo tipo de carne y pescado</item>
     </string-array>
 
-
-    <!--           MUSICATO              -->
+    <!--           VARIOS              -->
     <string-array name="array_nombre_varios">
         <item>Musicato Sweet </item>
         <item></item>
@@ -199,7 +203,7 @@
     </string-array>
 
     <string-array name="array_elaboracion_varios">
-        <item>Gracias a las mejores uvas del Penedés, la utilización únicamentedemostoflor, yuna cuidadaelaboración, obtenemos esta sofisticada bebida y refrescante bebida. Una vez obtenido el vino después de una primera fermentación,seiniciaelprocesodetomadeespuma, que nace de la fermentación natural en depósitos isobáricos, que nos permiten conseguir una presión final cercana a las 5 Atm. Las correcciones del licor de expedición, nos permiten presentar una bebida fresca, moderna y equilibrada.</item>
+        <item>Gracias a las mejores uvas del Penedés, la utilización únicamente de mosto flor, y una cuidada elaboración, obtenemos esta sofisticada bebida y refrescante bebida. Una vez obtenido el vino después de una primera fermentación, se inicia el proceso de toma de espuma, que nace de la fermentación natural en depósitos isobáricos, que nos permiten conseguir una presión final cercana a las 5 Atm. Las correcciones del licor de expedición, nos permiten presentar una bebida fresca, moderna y equilibrada.</item>
         <item></item>
     </string-array>
 
@@ -218,6 +222,5 @@
     <string name="elaboracion">Elaboración</string>
     <string name="comoServir">Como servir</string>
     <string name="cuandoServir">Cuando servir</string>
-
-
+    
 </resources>
