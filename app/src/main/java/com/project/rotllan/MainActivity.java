@@ -99,7 +99,8 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(this, CatalunyaActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_noDO) {
-
+            intent = new Intent(this, VariosActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_contacto) {
             intent = new Intent(this, ContactoActivity.class);
             startActivity(intent);

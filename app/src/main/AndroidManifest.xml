@@ -66,6 +66,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rotllan.MainActivity" />
         </activity>
+        <activity
+            android:name=".VariosActivity"
+            android:label="@string/title_activity_varios"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rotllan.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

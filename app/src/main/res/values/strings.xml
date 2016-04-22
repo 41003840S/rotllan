@@ -25,6 +25,7 @@
     <string name="title_activity_cava">Cava</string>
     <string name="title_activity_catalunya">Catalunya</string>
     <string name="title_activity_contacto">Contacto</string>
+    <string name="title_activity_varios">Varios</string>
 
     <!-- Contacto Activity -->
     <string name="nombre_jordi">Jordi Rotllan Torra</string>
@@ -62,7 +63,6 @@
         <item>Mistik es un vino elaborado a mano desde el primer momento del proceso. Es un vino de mucha calidad, al tener una excelente relación calidad precio hace que su rotación sea muy alta.\nAsí pues se pueden adquirir a precios muy competitivos.\nNo son vinos que se queden en lo lineal.\nVisualmente son muy atractivos y llaman la atención del consumidor</item>
     </string-array>
 
-
     <!--           RIOJA              -->
     <string-array name="array_nombre_rioja">
         <item>Aribau Cuvée Crianza</item>
@@ -88,7 +88,6 @@
         <item>Bello color picota intenso con el ribete de un ligero color teja y de buena intensidad, aromas de fruta roja, mentolados, cacao, minerales y maderas aromáticas. Potente y amplio muy bien estructurado, aromático y fresco. Su bouquet revela notas de frutas negras y especias dulces que se mezclan con una fina madera. En boca es carnoso, muy persistente en boca, resaltando la elegancia y finura de este gran vino. Tiene una vía retronasal larga. Tiene una larga vida.</item>
         <item>Bello color picota intenso con el ribete de un ligero color teja y de buena intensidad, aromas de fruta roja, mentolados, cacao, minerales y maderas aromáticas. Potente y amplio muy bien estructurado, aromático y fresco. Su bouquet revela notas de frutas negras y especias dulces que se mezclan con una fina madera. En boca es carnoso, muy persistente en boca, resaltando la elegancia y finura de este gran vino. Tiene una vía retronasal larga. Tiene una larga vida.</item>
     </string-array>
-
 
     <!--           CATALUNYA              -->
     <string-array name="array_nombre_catalunya">
@@ -116,7 +115,6 @@
         <item>Tiene una entrada muy suave, fresco y mineral. Claro y persistente. Apropiado para todas las carnes blancas y rojas. Ideal para platos con arroz, las carnes rojas y los semi curados o quesos curados.</item>
     </string-array>
 
-
     <!--           CAVAS              -->
     <string-array name="array_nombre_cavas">
         <item>Gran Palas</item>
@@ -129,8 +127,8 @@
     </string-array>
 
     <string-array name="array_coupatge_cavas">
-        <item>30% Macabeo\n30% Charelo\n40% Parellada</item>
-        <item>30% Macabeo\n30% Charelo\n40% Parellada</item>
+        <item>30% Macabeo\n30% Xarel·lo\n40% Parellada</item>
+        <item>30% Macabeo\n30% Xarel·lo\n40% Parellada</item>
     </string-array>
 
     <string-array name="array_graualco_cavas">
@@ -155,61 +153,71 @@
 
     <string-array name="array_color_cavas">
         <item>Amarillo pálido con tonos dorados. Limpio y brillante.</item>
-        <item></item>
+        <item>Amarillo paja con tonos dorados. Burbuja fina y abundante, con desprendimiento vertical y la corona bien formada</item>
     </string-array>
 
     <string-array name="array_aroma_cavas">
         <item>Limpio con fuerza media en nariz. Elegante y afrutado.</item>
-        <item></item>
+        <item>Agradable. Afrutado, con sensación de una larga crianza en botella</item>
     </string-array>
 
     <string-array name="array_sabor_cavas">
         <item>Buen balance en boca. Sabroso, con dulzura apropiada, muy suave y fresco. Excelente persistencia en perdida de burbujas.</item>
+        <item>Muy agradabble y seco. Delicado en boca, largo acabado limpio.</item>
+    </string-array>
+
+    <string-array name="array_como_cavas">
+        <item>Debe servirse frio a una temperatura entre 5°C y 6ºC. Se recomienda el tipo de copa flauta.</item>
+        <item>Debe servirse frio, nunca congelado, a una temperatura entre 5°C y 6ºC. Se recomienda el tipo de copa flauta.</item>
+    </string-array>
+
+    <string-array name="array_cuando_cavas">
+        <item>Muy agradable como aperitivo. Especialmente adecuado con carne blanca y pescado.</item>
+        <item>En comidas. Ideal para todo tipo de carne y pescado</item>
+    </string-array>
+
+
+    <!--           MUSICATO              -->
+    <string-array name="array_nombre_varios">
+        <item>Musicato Sweet </item>
         <item></item>
     </string-array>
 
-    <string-array name="array_como_servir">
-        <item></item>
-        <item></item>
-    </string-array>
-
-    <string-array name="array_cuando_servir">
-        <item></item>
+    <string-array name="array_anada_varios">
+        <item>Muscat</item>
         <item></item>
     </string-array>
 
-
-    <!--  <string-array name="array_nombre_catalunya">
-        <item>Ressó Tinto</item>
-        <item>Ressó Blanco</item>
+    <string-array name="array_coupatge_varios">
+        <item>33% Macabeo\n33% Xarel·lo\n33% Parellada</item>
+        <item></item>
     </string-array>
 
-    <string-array name="array_anada_catalunya">
-        <item>Seco</item>
-        <item>Seco</item>
+    <string-array name="array_graualco_varios">
+        <item>6,5% vol.</item>
+        <item></item>
     </string-array>
 
-    <string-array name="array_coupatge_catalunya">
-        <item>80% Garnacha 25% Tempranillo</item>
-        <item>100% Garnacha blanca</item>
+    <string-array name="array_elaboracion_varios">
+        <item>Gracias a las mejores uvas del Penedés, la utilización únicamentedemostoflor, yuna cuidadaelaboración, obtenemos esta sofisticada bebida y refrescante bebida. Una vez obtenido el vino después de una primera fermentación,seiniciaelprocesodetomadeespuma, que nace de la fermentación natural en depósitos isobáricos, que nos permiten conseguir una presión final cercana a las 5 Atm. Las correcciones del licor de expedición, nos permiten presentar una bebida fresca, moderna y equilibrada.</item>
+        <item></item>
     </string-array>
 
-    <string-array name="array_graualco_catalunya">
-        <item>14%</item>
-        <item>13,5%</item>
+    <string-array name="array_caracteristicas_varios">
+        <item>Este novedoso producto destaca porsus particularidades; bajo grado alcohólico, infusionado con esencias para darle un excelente aroma, un contenido alto en azúcar en perfecta armonía con su acidez y una imagen moderna, la convierten en una experiencia única e inolvidable.</item>
+        <item></item>
     </string-array>
 
-    <string-array name="array_descripcion_catalunya">
-        <item>Tiene una entrada muy suave, fresco y mineral. Claro y persistente. Apropiado para todas las carnes blancas y rojas. Ideal para platos con arroz, las carnes rojas y los semi curados o quesos curados.</item>
-        <item>Bien estructurado, intenso, carnoso y complejo. Ataque dulce con notas tropicales, florales y cítricas. Apropiado para cualquier tipo de pescado, carnes blancas, arroces y con un acabado ideal para acompañar quesos semi curados.</item>
-    </string-array>
-
--->
     <string name="coupage">Coupage</string>
     <string name="graduacion">Graduación</string>
     <string name="cosecha">Cosecha</string>
     <string name="color">Color</string>
     <string name="aroma">Aroma</string>
     <string name="sabor">Sabor</string>
+    <string name="caracteristicas">Caracteristicas</string>
+    <string name="elaboracion">Elaboración</string>
+    <string name="comoServir">Como servir</string>
+    <string name="cuandoServir">Cuando servir</string>
+
 
 </resources>

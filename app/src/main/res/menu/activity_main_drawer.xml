@@ -13,11 +13,11 @@
             <menu>
                 <item
                     android:id="@+id/nav_priorat"
-                    android:icon="@drawable/ic_menu_share"
+                    android:icon="@drawable/logodopriorat"
                     android:title="@string/pestana_dos" />
                 <item
                     android:id="@+id/nav_rioja"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/logodorioja"
                     android:title="@string/pestana_tres" />
                 <item
                     android:id="@+id/nav_rias"

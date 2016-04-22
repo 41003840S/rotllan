@@ -12,7 +12,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.project.rotllan.CavaActivity$PlaceholderFragment">
+    tools:context="com.project.rotllan.VariosActivity$PlaceholderFragment">
+
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/fotoCavas"
+                    android:id="@+id/fotoVarios"
                     android:layout_width="100dp"
                     android:layout_height="150dp" />
 
@@ -48,7 +49,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/nombreCavas"
+                            android:id="@+id/nombreVarios"
                             style="@style/Base.TextAppearance.AppCompat.Headline"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -62,7 +63,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/anoCavas"
+                            android:id="@+id/anoVarios"
                             style="@style/Base.TextAppearance.AppCompat.Body1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -87,7 +88,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/coupatgeCavas"
+                        android:id="@+id/coupatgeVarios"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
@@ -102,7 +103,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/gradosCavas"
+                        android:id="@+id/gradosVarios"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingStart="8dp" />
@@ -124,74 +125,23 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/list_item_artile_vertical_margin"
             android:layout_marginTop="@dimen/list_item_artile_vertical_margin"
-            android:orientation="vertical">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
-                android:id="@+id/color"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:text="@string/color"/>
 
             <TextView
-                android:id="@+id/coloresCava"
+                android:id="@+id/elaboracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:text="@string/elaboracion"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/elaboracionVarios"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="4dp"
                 android:paddingStart="16dp" />
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/aroma"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:text="@string/aroma"/>
-
-            <TextView
-                android:id="@+id/aromasCava"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="4dp"
-                android:paddingStart="16dp" />
-
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/sabor"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:text="@string/sabor"/>
-
-            <TextView
-                android:id="@+id/saboresCava"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="4dp"
-                android:paddingStart="16dp" />
-            </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -207,34 +157,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/list_item_artile_vertical_margin"
             android:layout_marginTop="@dimen/list_item_artile_vertical_margin"
-            android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/comoServir"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="16dp"
-                    android:text="@string/comoServir"/>
-
-                <TextView
-                android:id="@+id/comoServirCava"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="4dp"
-                android:paddingStart="16dp" />
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/cuandoServir"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
+                android:id="@+id/caracteristicas"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:text="@string/cuandoServir"/>
+                android:paddingStart="8dp"
+                android:text="@string/caracteristicas"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/cuandoServirCava"
+                android:id="@+id/descripcionVarios"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -246,4 +180,5 @@
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
+
 </ScrollView>

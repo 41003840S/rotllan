@@ -23,7 +23,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.Arrays;
 
-public class CavaActivity extends AppCompatActivity {
+public class VariosActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -43,7 +43,7 @@ public class CavaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cava);
+        setContentView(R.layout.activity_varios);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,13 +56,23 @@ public class CavaActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cava, menu);
+        getMenuInflater().inflate(R.menu.menu_varios, menu);
         return true;
     }
 
@@ -110,43 +120,35 @@ public class CavaActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_cava, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_varios, container, false);
 
             posicion = getArguments().getInt(ARG_SECTION_NUMBER);
             int posicion2 = posicion - 1;
 
-            TextView nombre = (TextView) rootView.findViewById(R.id.nombreCavas);
-            TextView ano = (TextView) rootView.findViewById(R.id.anoCavas);
-            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeCavas);
-            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoCavas);
-            TextView grado = (TextView) rootView.findViewById(R.id.gradosCavas);
-            TextView aroma = (TextView) rootView.findViewById(R.id.aromasCava);
-            TextView color = (TextView) rootView.findViewById(R.id.coloresCava);
-            TextView sabor = (TextView) rootView.findViewById(R.id.saboresCava);
-            TextView como = (TextView) rootView.findViewById(R.id.comoServirCava);
-            TextView cuando = (TextView) rootView.findViewById(R.id.cuandoServirCava);
+            TextView nombre = (TextView) rootView.findViewById(R.id.nombreVarios);
+            TextView ano = (TextView) rootView.findViewById(R.id.anoVarios);
+            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeVarios);
+            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionVarios);
+            TextView elaboracion = (TextView) rootView.findViewById(R.id.elaboracionVarios);
+            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoVarios);
+            TextView grado = (TextView) rootView.findViewById(R.id.gradosVarios);
 
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_cavas);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_cavas);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_cavas);
-            String[] arrayColores = getResources().getStringArray(R.array.array_color_cavas);
-            String[] arrayAromas = getResources().getStringArray(R.array.array_aroma_cavas);
-            String[] arraySabores = getResources().getStringArray(R.array.array_sabor_cavas);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_cavas);
-            String[] arrayComo = getResources().getStringArray(R.array.array_como_cavas);
-            String[] arrayCuando = getResources().getStringArray(R.array.array_cuando_cavas);
-            int[] imagenes = {R.drawable.cavapalasbrut,R.drawable.cavapalacebutnature};
+
+            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_varios);
+            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_varios);
+            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_varios);
+            String[] arrayDescripcion = getResources().getStringArray(R.array.array_caracteristicas_varios);
+            String[] arrayElaboracion = getResources().getStringArray(R.array.array_elaboracion_varios);
+            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_varios);
+            int[] imagenes = {R.drawable.musicato};
 
             Glide.with(this).load(imagenes[posicion2]).into(foto);
             nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
             ano.setText(Arrays.asList(arrayAnos).get(posicion2));
             coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
             grado.setText(Arrays.asList(arrayGrados).get(posicion2));
-            color.setText(Arrays.asList(arrayColores).get(posicion2));
-            aroma.setText(Arrays.asList(arrayAromas).get(posicion2));
-            sabor.setText(Arrays.asList(arraySabores).get(posicion2));
-            como.setText(Arrays.asList(arrayComo).get(posicion2));
-            cuando.setText(Arrays.asList(arrayCuando).get(posicion2));
+            descripcion.setText(Arrays.asList(arrayDescripcion).get(posicion2));
+            elaboracion.setText(Arrays.asList(arrayElaboracion).get(posicion2));
 
             return rootView;
         }
@@ -171,17 +173,15 @@ public class CavaActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
-            return 2;
+            // Show 1 total pages.
+            return 1;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Cava Brut";
-                case 1:
-                    return "Cava Brut Nature";
+                    return "Musicato";
             }
             return null;
         }
