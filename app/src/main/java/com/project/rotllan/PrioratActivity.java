@@ -18,8 +18,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
-import java.util.Arrays;
+import com.firebase.client.Firebase;
+import com.firebase.ui.FirebaseListAdapter;
+import com.project.rotllan.pojos.Vino;
 
 public class PrioratActivity extends AppCompatActivity {
 
@@ -53,16 +54,6 @@ public class PrioratActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
     }
 
@@ -99,6 +90,8 @@ public class PrioratActivity extends AppCompatActivity {
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
         int posicion;
+        TextView nombre, ano, coupage, descripcion, grado;
+        ImageView foto, logo1, logo2, logo3, logo4, logo5, logo6;
 
         public PlaceholderFragment() {
         }
@@ -118,43 +111,47 @@ public class PrioratActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
             View rootView = inflater.inflate(R.layout.fragment_priorat, container, false);
 
             posicion = getArguments().getInt(ARG_SECTION_NUMBER);
             int posicion2 = posicion - 1;
 
-            TextView nombre = (TextView) rootView.findViewById(R.id.nombrePriorats);
-            TextView ano = (TextView) rootView.findViewById(R.id.anoPriorats);
-            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgePriorats);
-            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionPriorats);
-            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoPriorats);
-            TextView grado = (TextView) rootView.findViewById(R.id.gradosPriorat);
+            //Le decimos a Firebase que este sera el contexto
+            Firebase.setAndroidContext(getContext());
 
-            ImageView logo1 = (ImageView) rootView.findViewById(R.id.logo1);
-            ImageView logo2 = (ImageView) rootView.findViewById(R.id.logo2);
-            ImageView logo3 = (ImageView) rootView.findViewById(R.id.logo3);
-            ImageView logo4 = (ImageView) rootView.findViewById(R.id.logo4);
-            ImageView logo5 = (ImageView) rootView.findViewById(R.id.logo5);
-            ImageView logo6 = (ImageView) rootView.findViewById(R.id.logo6);
+            //Creamos una referencia a nuestra bd de Firebase
+            Firebase refVinos = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/priorat");
 
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_priorats);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_priorats);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_priorats);
-            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_priorats);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_priorats);
+            nombre = (TextView) rootView.findViewById(R.id.nombrePriorats);
+            ano = (TextView) rootView.findViewById(R.id.anoPriorats);
+            coupage = (TextView) rootView.findViewById(R.id.coupatgePriorats);
+            descripcion = (TextView) rootView.findViewById(R.id.descripcionPriorats);
+            foto = (ImageView) rootView.findViewById(R.id.fotoPriorats);
+            grado = (TextView) rootView.findViewById(R.id.gradosPriorat);
 
-            nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
-            ano.setText(Arrays.asList(arrayAnos).get(posicion2));
-            coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
-            descripcion.setText(Arrays.asList(arrayDescripcion).get(posicion2));
-            Glide.with(this).load(R.drawable.vinoprueba).into(foto);
-            grado.setText(Arrays.asList(arrayGrados).get(posicion2));
-            Glide.with(this).load(R.drawable.pollo).into(logo1);
-            Glide.with(this).load(R.drawable.carne).into(logo2);
-            Glide.with(this).load(R.drawable.jamon).into(logo3);
-            Glide.with(this).load(R.drawable.pato).into(logo4);
-            Glide.with(this).load(R.drawable.pescado).into(logo5);
-            Glide.with(this).load(R.drawable.cheese).into(logo6);
+            logo1 = (ImageView) rootView.findViewById(R.id.logo1);
+            logo2 = (ImageView) rootView.findViewById(R.id.logo2);
+            logo3 = (ImageView) rootView.findViewById(R.id.logo3);
+            logo4 = (ImageView) rootView.findViewById(R.id.logo4);
+            logo5 = (ImageView) rootView.findViewById(R.id.logo5);
+            logo6 = (ImageView) rootView.findViewById(R.id.logo6);
+
+
+            final FirebaseListAdapter adapter = new FirebaseListAdapter<Vino>(getActivity(), Vino.class, R.layout.fragment_priorat, refVinos) {
+                @Override
+                protected void populateView(View v, Vino model, int position) {
+                    super.populateView(v, model, position);
+
+                    nombre.setText(model.getNombre());
+                    ano.setText(model.getCosecha());
+                    coupage.setText(model.getCoupatge());
+                    descripcion.setText(model.getDescripcion());
+                    Glide.with(getActivity()).load(model.getImagenVino()).into(foto);
+                    grado.setText(model.getGrados());
+
+                }
+            };
 
             return rootView;
         }

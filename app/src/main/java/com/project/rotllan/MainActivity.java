@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,14 +24,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-        WebView webview = (WebView) findViewById(R.id.webView);
-
-
-        webview.loadUrl("http://slashdot.org/");
-
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -93,9 +84,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_todos) {
-            // Handle the camera action
+            intent = new Intent(this, RestaurantesActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_priorat) {
-            intent = new Intent(this, PrioratActivity.class);
+            intent = new Intent(this, DenominacionesActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_rioja) {
             intent = new Intent(this, RiojaActivity.class);

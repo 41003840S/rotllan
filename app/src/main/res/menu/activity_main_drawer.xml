@@ -4,20 +4,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_todos"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/iconorestaurantes"
             android:title="@string/pestana_uno" />
     </group>
 
     <group android:checkableBehavior="single">
-        <item android:title="@string/denominacion_origen">
+        <item android:title="@string/titulo1">
             <menu>
                 <item
                     android:id="@+id/nav_priorat"
-                    android:icon="@drawable/logodopriorat"
+                    android:icon="@drawable/iconodeno"
                     android:title="@string/pestana_dos" />
                 <item
                     android:id="@+id/nav_rioja"
-                    android:icon="@drawable/logodorioja"
+                    android:icon="@drawable/icononodeno"
                     android:title="@string/pestana_tres" />
                 <item
                     android:id="@+id/nav_rias"
@@ -40,7 +40,7 @@
         <menu>
             <item
                 android:id="@+id/nav_noDO"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/icononodeno"
                 android:title="@string/varios" />
         </menu>
     </item>

@@ -9,10 +9,10 @@
     <string name="action_settings">Settings</string>
 
     <!-- Navigation Drawer -->
-    <string name="pestana_uno">Todos los productos</string>
-    <string name="denominacion_origen">Denominación de origen</string>
+    <string name="pestana_uno">Restaurantes</string>
+    <string name="titulo1">Productos</string>
     <string name="sin_denominacion_origen">Sin denominación de origen</string>
-    <string name="pestana_dos">Priorat</string>
+    <string name="pestana_dos">D.O</string>
     <string name="pestana_tres">Rioja</string>
     <string name="pestana_cuatro">Rias baixas</string>
     <string name="pestana_cinco">Cava</string>
@@ -222,5 +222,7 @@
     <string name="elaboracion">Elaboración</string>
     <string name="comoServir">Como servir</string>
     <string name="cuandoServir">Cuando servir</string>
-    
+    <string name="title_activity_restaurantes">Map</string>
+    <string name="title_activity_denominaciones">Denominaciones</string>
+
 </resources>

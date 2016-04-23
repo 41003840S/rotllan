@@ -4,6 +4,14 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +32,7 @@
         <activity
             android:name=".PrioratActivity"
             android:label="@string/title_activity_priorat"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".DenominacionesActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -42,7 +50,7 @@
         <activity
             android:name=".RiojaActivity"
             android:label="@string/title_activity_rioja"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".DenominacionesActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -51,7 +59,7 @@
         <activity
             android:name=".CatalunyaActivity"
             android:label="@string/title_activity_catalunya"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".DenominacionesActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -60,7 +68,7 @@
         <activity
             android:name=".CavaActivity"
             android:label="@string/title_activity_cava"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".DenominacionesActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -69,6 +77,34 @@
         <activity
             android:name=".VariosActivity"
             android:label="@string/title_activity_varios"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rotllan.MainActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".RestaurantesActivity"
+            android:label="@string/title_activity_restaurantes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rotllan.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DenominacionesActivity"
+            android:label="@string/title_activity_denominaciones"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
