@@ -29,7 +29,7 @@
     <string name="title_activity_cava">Cava</string>
     <string name="title_activity_catalunya">Catalunya</string>
     <string name="title_activity_varios">Varios</string>
-    <string name="title_activity_blog">Blog</string>
+    <string name="title_activity_noticias">Noticias</string>
     <string name="title_activity_contacto">Contacto</string>
 
     <!-- Contacto Activity -->
@@ -222,7 +222,6 @@
     <string name="elaboracion">Elaboración</string>
     <string name="comoServir">Como servir</string>
     <string name="cuandoServir">Cuando servir</string>
-
 
 
 </resources>

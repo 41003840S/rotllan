@@ -11,25 +11,30 @@
         android:layout_marginTop="@dimen/card_margin">
 
         <LinearLayout
-            style="@style/Widget.CardContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/fotoNoticia"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
 
-                <TextView
-                    android:id="@+id/tituloNoticia"
-                    style="style/TextAppearance.Medium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed"
-                    android:lineSpacingMultiplier="0.85"
-                    android:textStyle="bold"
-                    android:paddingStart="16dp" />
+            <TextView
+                android:id="@+id/tituloNoticia"
+                style="style/TextAppearance.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingMultiplier="0.85"
+                android:textStyle="bold"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/descripcionNoticia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
