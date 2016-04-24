@@ -39,7 +39,7 @@ public class ContactoActivity extends AppCompatActivity {
 
         //Set toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(getResources().getString(R.string.contacto));
+        toolbar.setTitle(getResources().getString(R.string.pestana_cinco));
         setSupportActionBar(toolbar);
 
         //Inicializar la libreria ButterKnive

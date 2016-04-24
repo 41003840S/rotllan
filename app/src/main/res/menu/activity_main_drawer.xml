@@ -12,47 +12,35 @@
         <item android:title="@string/titulo1">
             <menu>
                 <item
-                    android:id="@+id/nav_priorat"
+                    android:id="@+id/nav_DO"
                     android:icon="@drawable/iconodeno"
                     android:title="@string/pestana_dos" />
                 <item
-                    android:id="@+id/nav_rioja"
+                    android:id="@+id/nav_noDO"
                     android:icon="@drawable/icononodeno"
                     android:title="@string/pestana_tres" />
-                <item
-                    android:id="@+id/nav_rias"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="@string/pestana_cuatro" />
-                <item
-                    android:id="@+id/nav_cava"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="@string/pestana_cinco" />
-                <item
-                    android:id="@+id/nav_cat"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="@string/pestana_seis" />
             </menu>
         </item>
     </group>
 
     <group android:checkableBehavior="single">
-    <item android:title="@string/sin_denominacion_origen">
+    <item android:title="@string/titulo2">
         <menu>
             <item
-                android:id="@+id/nav_noDO"
-                android:icon="@drawable/icononodeno"
-                android:title="@string/varios" />
+                android:id="@+id/nav_noticias"
+                android:icon="@drawable/newspaper"
+                android:title="@string/pestana_cuatro" />
         </menu>
     </item>
     </group>
 
     <group android:checkableBehavior="single">
-        <item android:title="@string/comunicacion">
+        <item android:title="@string/titulo3">
             <menu>
                 <item
                     android:id="@+id/nav_contacto"
                     android:icon="@drawable/ic_menu_share"
-                    android:title="@string/contacto" />
+                    android:title="@string/pestana_cinco" />
             </menu>
         </item>
     </group>

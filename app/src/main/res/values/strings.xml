@@ -11,26 +11,26 @@
     <!-- Navigation Drawer -->
     <string name="pestana_uno">Restaurantes</string>
     <string name="titulo1">Productos</string>
-    <string name="sin_denominacion_origen">Sin denominación de origen</string>
+    <string name="titulo2">Blog</string>
     <string name="pestana_dos">D.O</string>
-    <string name="pestana_tres">Rioja</string>
-    <string name="pestana_cuatro">Rias baixas</string>
-    <string name="pestana_cinco">Cava</string>
-    <string name="pestana_seis">Cataluña</string>
-    <string name="varios">Varios</string>
-    <string name="comunicacion">Comunicación</string>
-    <string name="contacto">Contacto</string>
+    <string name="pestana_tres">Sin Denominacion</string>
+    <string name="pestana_cuatro">Noticias</string>
+    <string name="titulo3">Comunicación</string>
+    <string name="pestana_cinco">Contacto</string>
 
     <!-- Tabbed Activity -->
     <string name="section_format">Hello World from section: %1$d</string>
 
     <!--Nombre de las activities -->
+    <string name="title_activity_restaurantes">Map</string>
+    <string name="title_activity_denominaciones">Denominaciones</string>
     <string name="title_activity_priorat">Priorat</string>
     <string name="title_activity_rioja">Rioja</string>
     <string name="title_activity_cava">Cava</string>
     <string name="title_activity_catalunya">Catalunya</string>
-    <string name="title_activity_contacto">Contacto</string>
     <string name="title_activity_varios">Varios</string>
+    <string name="title_activity_blog">Blog</string>
+    <string name="title_activity_contacto">Contacto</string>
 
     <!-- Contacto Activity -->
     <string name="nombre_jordi">Jordi Rotllan Torra</string>
@@ -222,7 +222,7 @@
     <string name="elaboracion">Elaboración</string>
     <string name="comoServir">Como servir</string>
     <string name="cuandoServir">Cuando servir</string>
-    <string name="title_activity_restaurantes">Map</string>
-    <string name="title_activity_denominaciones">Denominaciones</string>
+
+
 
 </resources>

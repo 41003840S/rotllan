@@ -86,22 +86,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_todos) {
             intent = new Intent(this, RestaurantesActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_priorat) {
+        } else if (id == R.id.nav_DO) {
             intent = new Intent(this, DenominacionesActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_rioja) {
-            intent = new Intent(this, RiojaActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_rias) {
-
-        } else if (id == R.id.nav_cava) {
-            intent = new Intent(this, CavaActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_cat) {
-            intent = new Intent(this, CatalunyaActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_noDO) {
             intent = new Intent(this, VariosActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_noticias) {
+            intent = new Intent(this, BlogActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_contacto) {
             intent = new Intent(this, ContactoActivity.class);

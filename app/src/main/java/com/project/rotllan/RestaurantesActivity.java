@@ -68,7 +68,8 @@ public class RestaurantesActivity extends FragmentActivity implements OnMapReady
                     Restaurante restaurante = postSnapshot.getValue(Restaurante.class);
                     mMap.addMarker(new MarkerOptions()
                             .position(new LatLng(restaurante.getLatitud(), restaurante.getLongitud()))
-                            .title(restaurante.getNombre()));
+                            .title(restaurante.getNombre())
+                            .snippet(restaurante.getDireccion()));
                 }
             }
 
