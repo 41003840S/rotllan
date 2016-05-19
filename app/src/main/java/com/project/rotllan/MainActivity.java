@@ -1,5 +1,6 @@
 package com.project.rotllan;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Intent intent;
+    ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,15 +28,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+       /* while(!MyApplication.descargado){
+            progressDialog = ProgressDialog.show(this, "Descargando información",
+                           "Espere porfavor", true);
+        }
+        progressDialog.dismiss();
+*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -92,11 +92,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_noDO) {
             intent = new Intent(this, VariosActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_noticias) {
-           /* intent = new Intent(this, BlogActivity.class);
-            startActivity(intent);*/
+       /* } else if (id == R.id.nav_noticias) {
             intent = new Intent(this, NoticiasActivity.class);
-            startActivity(intent);
+            startActivity(intent);*/
         } else if (id == R.id.nav_contacto) {
             intent = new Intent(this, ContactoActivity.class);
             startActivity(intent);

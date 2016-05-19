@@ -133,23 +133,14 @@ public class VariosActivity extends AppCompatActivity {
             ImageView foto = (ImageView) rootView.findViewById(R.id.fotoVarios);
             TextView grado = (TextView) rootView.findViewById(R.id.gradosVarios);
 
+            nombre.setText(MyApplication.arrayVarios.get(posicion2).getNombre());
+            ano.setText(MyApplication.arrayVarios.get(posicion2).getCosecha());
+            coupage.setText(MyApplication.arrayVarios.get(posicion2).getCoupatge());
+            descripcion.setText(MyApplication.arrayVarios.get(posicion2).getDescripcion());
+            grado.setText(MyApplication.arrayVarios.get(posicion2).getGrados());
+            elaboracion.setText(MyApplication.arrayVarios.get(posicion2).getElaboracion());
 
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_varios);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_varios);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_varios);
-            String[] arrayDescripcion = getResources().getStringArray(R.array.array_caracteristicas_varios);
-            String[] arrayElaboracion = getResources().getStringArray(R.array.array_elaboracion_varios);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_varios);
-            int[] imagenes = {R.drawable.musicato};
-
-            Glide.with(this).load(imagenes[posicion2]).into(foto);
-            nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
-            ano.setText(Arrays.asList(arrayAnos).get(posicion2));
-            coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
-            grado.setText(Arrays.asList(arrayGrados).get(posicion2));
-            descripcion.setText(Arrays.asList(arrayDescripcion).get(posicion2));
-            elaboracion.setText(Arrays.asList(arrayElaboracion).get(posicion2));
-
+            Glide.with(getContext()).load(MyApplication.arrayVarios.get(posicion2).getImagenVino()).into(foto);
             return rootView;
         }
     }
@@ -174,7 +165,7 @@ public class VariosActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 1 total pages.
-            return 1;
+            return MyApplication.arrayVarios.size();
         }
 
         @Override

@@ -1,6 +1,7 @@
 package com.project.rotllan;
 
-import android.animation.Animator;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -20,7 +21,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class CavaActivity extends AppCompatActivity {
+public class RiasbaixasActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -40,7 +41,7 @@ public class CavaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cava);
+        setContentView(R.layout.activity_riasbaixas);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,7 +60,7 @@ public class CavaActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cava, menu);
+        getMenuInflater().inflate(R.menu.menu_riasbaixas, menu);
         return true;
     }
 
@@ -88,9 +89,6 @@ public class CavaActivity extends AppCompatActivity {
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
         int posicion;
-        int posicion2;
-        private Animator mCurrentAnimator;
-        private int mShortAnimationDuration;
 
         public PlaceholderFragment() {
         }
@@ -110,37 +108,29 @@ public class CavaActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_cava, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_riasbaixas, container, false);
 
             posicion = getArguments().getInt(ARG_SECTION_NUMBER);
-            posicion2 = posicion - 1;
+            int posicion2 = posicion - 1;
 
-            TextView nombre = (TextView) rootView.findViewById(R.id.nombreCavas);
-            TextView ano = (TextView) rootView.findViewById(R.id.anoCavas);
-            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeCavas);
-            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoCavas);
-            TextView grado = (TextView) rootView.findViewById(R.id.gradosCavas);
-            TextView aroma = (TextView) rootView.findViewById(R.id.aromasCava);
-            TextView color = (TextView) rootView.findViewById(R.id.coloresCava);
-            TextView sabor = (TextView) rootView.findViewById(R.id.saboresCava);
-            TextView como = (TextView) rootView.findViewById(R.id.comoServirCava);
-            TextView cuando = (TextView) rootView.findViewById(R.id.cuandoServirCava);
 
-            nombre.setText(MyApplication.arrayCava.get(posicion2).getNombre());
-            ano.setText(MyApplication.arrayCava.get(posicion2).getCosecha());
-            coupage.setText(MyApplication.arrayCava.get(posicion2).getCoupatge());
-            grado.setText(MyApplication.arrayCava.get(posicion2).getGrados());
-            aroma.setText(MyApplication.arrayCava.get(posicion2).getAroma());
-            color.setText(MyApplication.arrayCava.get(posicion2).getColor());
-            sabor.setText(MyApplication.arrayCava.get(posicion2).getSabor());
-            como.setText(MyApplication.arrayCava.get(posicion2).getComoServir());
-            cuando.setText(MyApplication.arrayCava.get(posicion2).getCuandoServir());
+            TextView nombre = (TextView) rootView.findViewById(R.id.nombreRias);
+            TextView ano = (TextView) rootView.findViewById(R.id.anoRias);
+            TextView coupage = (TextView) rootView.findViewById(R.id.coupatgeRias);
+            TextView descripcion = (TextView) rootView.findViewById(R.id.descripcionRias);
+            ImageView foto = (ImageView) rootView.findViewById(R.id.fotoRias);
+            TextView grado = (TextView) rootView.findViewById(R.id.gradosRias);
 
-            Glide.with(getContext()).load(MyApplication.arrayCava.get(posicion2).getImagenVino()).into(foto);
+            nombre.setText(MyApplication.arrayRias.get(posicion2).getNombre());
+            ano.setText(MyApplication.arrayRias.get(posicion2).getCosecha());
+            coupage.setText(MyApplication.arrayRias.get(posicion2).getCoupatge());
+            descripcion.setText(MyApplication.arrayRias.get(posicion2).getDescripcion());
+            grado.setText(MyApplication.arrayRias.get(posicion2).getGrados());
+
+            Glide.with(getContext()).load(MyApplication.arrayRias.get(posicion2).getImagenVino()).into(foto);
 
             return rootView;
         }
-
     }
 
     /**
@@ -162,17 +152,19 @@ public class CavaActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
-            return MyApplication.arrayCava.size();
+            // Show 3 total pages.
+            return MyApplication.arrayRias.size();
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Cava Brut";
+                    return "Gundian";
                 case 1:
-                    return "Cava Brut Nature";
+                    return "SECTION 2";
+                case 2:
+                    return "SECTION 3";
             }
             return null;
         }

@@ -135,51 +135,5 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/card_margin">
-
-        <LinearLayout
-            style="@style/Widget.CardContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/list_item_artile_vertical_margin"
-            android:layout_marginTop="@dimen/list_item_artile_vertical_margin"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/logo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <ImageView
-                android:id="@+id/logo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <ImageView
-                android:id="@+id/logo3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <ImageView
-                android:id="@+id/logo4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <ImageView
-                android:id="@+id/logo5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <ImageView
-                android:id="@+id/logo6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
 </LinearLayout>
     </ScrollView>

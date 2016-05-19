@@ -9,48 +9,47 @@
     <string name="action_settings">Settings</string>
 
     <!-- Navigation Drawer -->
-    <string name="pestana_uno">Clientes</string>
-    <string name="titulo1">Productos</string>
+    <string name="pestana_uno">Customers</string>
+    <string name="titulo1">Wines</string>
     <string name="titulo2">Blog</string>
     <string name="pestana_dos">D.O</string>
-    <string name="pestana_tres">Sin Denominacion</string>
-    <string name="pestana_cuatro">Noticias</string>
-    <string name="titulo3">Comunicación</string>
-    <string name="pestana_cinco">Contacto</string>
+    <string name="pestana_tres">Without Designation</string>
+    <string name="pestana_cuatro">News</string>
+    <string name="titulo3">Communication</string>
+    <string name="pestana_cinco">Contact</string>
 
     <!-- Tabbed Activity -->
     <string name="section_format">Hello World from section: %1$d</string>
 
     <!--Nombre de las activities -->
-    <string name="title_activity_restaurantes">Mapa</string>
-    <string name="title_activity_denominaciones">Denominaciones</string>
+    <string name="title_activity_restaurantes">Map</string>
+    <string name="title_activity_denominaciones">Designations</string>
     <string name="title_activity_priorat">Priorat</string>
     <string name="title_activity_rioja">Rioja</string>
     <string name="title_activity_cava">Cava</string>
     <string name="title_activity_catalunya">Catalunya</string>
-    <string name="title_activity_varios">Varios</string>
-    <string name="title_activity_noticias">Noticias</string>
-    <string name="title_activity_contacto">Contacto</string>
+    <string name="title_activity_varios">Others</string>
+    <string name="title_activity_noticias">News</string>
+    <string name="title_activity_contacto">Contact</string>
 
     <!-- Contacto Activity -->
     <string name="nombre_jordi">Jordi Rotllan Torra</string>
     <string name="cargo">Vins d\'alta qualitat SL</string>
-    <string name="telefono">Teléfono: </string>
+    <string name="telefono">Telephone: </string>
     <string name="numero_telefono">+34 93 313 43 47</string>
     <string name="web">Web: </string>
     <string name="pagina_web">www.rotllantorra.com</string>
 
     <!-- Fragments de los productos -->
     <string name="coupage">Coupage</string>
-    <string name="graduacion">Graduación</string>
+    <string name="graduacion">Alcohol content</string>
     <string name="cosecha">Cosecha</string>
     <string name="color">Color</string>
-    <string name="aroma">Aroma</string>
-    <string name="sabor">Sabor</string>
-    <string name="caracteristicas">Caracteristicas</string>
-    <string name="elaboracion">Elaboración</string>
-    <string name="comoServir">Como servir</string>
-    <string name="cuandoServir">Cuando servir</string>
-    <string name="title_activity_riasbaixas">RiasbaixasActivity</string>
+    <string name="aroma">Frag.</string>
+    <string name="sabor">Flavor</string>
+    <string name="caracteristicas">Properties</string>
+    <string name="elaboracion">Elaboration</string>
+    <string name="comoServir">How to serve</string>
+    <string name="cuandoServir">When to serve</string>
 
 </resources>

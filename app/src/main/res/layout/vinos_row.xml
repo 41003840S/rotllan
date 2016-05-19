@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin">
+
+        <LinearLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_item_artile_vertical_margin"
+            android:layout_marginTop="@dimen/list_item_artile_vertical_margin"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vinoName"
+                    style="style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:lineSpacingMultiplier="0.85"
+                    android:paddingBottom="4dp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:paddingStart="16dp" />
+
+                <TextView
+                    android:id="@+id/zonaVino"
+                    style="style/TextAppearance.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingStart="16dp"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

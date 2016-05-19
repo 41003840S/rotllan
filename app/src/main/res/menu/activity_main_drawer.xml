@@ -23,7 +23,7 @@
         </item>
     </group>
 
-    <group android:checkableBehavior="single">
+   <!-- <group android:checkableBehavior="single">
     <item android:title="@string/titulo2">
         <menu>
             <item
@@ -32,7 +32,7 @@
                 android:title="@string/pestana_cuatro" />
         </menu>
     </item>
-    </group>
+    </group>-->
 
     <group android:checkableBehavior="single">
         <item android:title="@string/titulo3">

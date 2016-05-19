@@ -38,8 +38,8 @@ public class DenominacionesActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 2:
-                        //intent = new Intent(getApplicationContext(), Ria.class);
-                        //startActivity(intent);
+                        intent = new Intent(getApplicationContext(), RiasbaixasActivity.class);
+                        startActivity(intent);
                         break;
                     case 3:
                         intent = new Intent(getApplicationContext(), CatalunyaActivity.class);

@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,9 +19,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.firebase.ui.FirebaseListAdapter;
+import com.project.rotllan.pojos.Restaurante;
 import com.project.rotllan.pojos.Vino;
+
+import java.util.ArrayList;
 
 public class PrioratActivity extends AppCompatActivity {
 
@@ -118,10 +126,7 @@ public class PrioratActivity extends AppCompatActivity {
             int posicion2 = posicion - 1;
 
             //Le decimos a Firebase que este sera el contexto
-            Firebase.setAndroidContext(getContext());
 
-            //Creamos una referencia a nuestra bd de Firebase
-            Firebase refVinos = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/priorat");
 
             nombre = (TextView) rootView.findViewById(R.id.nombrePriorats);
             ano = (TextView) rootView.findViewById(R.id.anoPriorats);
@@ -130,28 +135,14 @@ public class PrioratActivity extends AppCompatActivity {
             foto = (ImageView) rootView.findViewById(R.id.fotoPriorats);
             grado = (TextView) rootView.findViewById(R.id.gradosPriorat);
 
-            logo1 = (ImageView) rootView.findViewById(R.id.logo1);
-            logo2 = (ImageView) rootView.findViewById(R.id.logo2);
-            logo3 = (ImageView) rootView.findViewById(R.id.logo3);
-            logo4 = (ImageView) rootView.findViewById(R.id.logo4);
-            logo5 = (ImageView) rootView.findViewById(R.id.logo5);
-            logo6 = (ImageView) rootView.findViewById(R.id.logo6);
 
+            nombre.setText(MyApplication.arrayPriorats.get(posicion2).getNombre());
+            ano.setText(MyApplication.arrayPriorats.get(posicion2).getCosecha());
+            coupage.setText(MyApplication.arrayPriorats.get(posicion2).getCoupatge());
+            descripcion.setText(MyApplication.arrayPriorats.get(posicion2).getDescripcion());
+            grado.setText(MyApplication.arrayPriorats.get(posicion2).getGrados());
 
-            final FirebaseListAdapter adapter = new FirebaseListAdapter<Vino>(getActivity(), Vino.class, R.layout.fragment_priorat, refVinos) {
-                @Override
-                protected void populateView(View v, Vino model, int position) {
-                    super.populateView(v, model, position);
-
-                    nombre.setText(model.getNombre());
-                    ano.setText(model.getCosecha());
-                    coupage.setText(model.getCoupatge());
-                    descripcion.setText(model.getDescripcion());
-                    Glide.with(getActivity()).load(model.getImagenVino()).into(foto);
-                    grado.setText(model.getGrados());
-
-                }
-            };
+            Glide.with(getContext()).load(MyApplication.arrayPriorats.get(posicion2).getImagenVino()).into(foto);
 
             return rootView;
         }
@@ -177,7 +168,7 @@ public class PrioratActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return MyApplication.arrayPriorats.size();
         }
 
         @Override

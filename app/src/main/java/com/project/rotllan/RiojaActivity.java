@@ -19,8 +19,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.Arrays;
-
 public class RiojaActivity extends AppCompatActivity {
 
     /**
@@ -121,32 +119,13 @@ public class RiojaActivity extends AppCompatActivity {
             ImageView foto = (ImageView) rootView.findViewById(R.id.fotoRiojas);
             TextView grado = (TextView) rootView.findViewById(R.id.gradosRiojas);
 
-            ImageView logo1 = (ImageView) rootView.findViewById(R.id.logo1);
-            ImageView logo2 = (ImageView) rootView.findViewById(R.id.logo2);
-            ImageView logo3 = (ImageView) rootView.findViewById(R.id.logo3);
-            ImageView logo4 = (ImageView) rootView.findViewById(R.id.logo4);
-            ImageView logo5 = (ImageView) rootView.findViewById(R.id.logo5);
-            ImageView logo6 = (ImageView) rootView.findViewById(R.id.logo6);
+            nombre.setText(MyApplication.arrayRiojas.get(posicion2).getNombre());
+            ano.setText(MyApplication.arrayRiojas.get(posicion2).getCosecha());
+            coupage.setText(MyApplication.arrayRiojas.get(posicion2).getCoupatge());
+            descripcion.setText(MyApplication.arrayRiojas.get(posicion2).getDescripcion());
+            grado.setText(MyApplication.arrayRiojas.get(posicion2).getGrados());
 
-            String[] arrayNombres = getResources().getStringArray(R.array.array_nombre_rioja);
-            String[] arrayAnos = getResources().getStringArray(R.array.array_anada_rioja);
-            String[] arrayCoupage = getResources().getStringArray(R.array.array_coupatge_rioja);
-            String[] arrayDescripcion = getResources().getStringArray(R.array.array_descripcion_rioja);
-            String[] arrayGrados = getResources().getStringArray(R.array.array_graualco_rioja);
-            int[] imagenes = {R.drawable.riojacrianza, R.drawable.riojareserva};
-
-            nombre.setText(Arrays.asList(arrayNombres).get(posicion2));
-            ano.setText(Arrays.asList(arrayAnos).get(posicion2));
-            coupage.setText(Arrays.asList(arrayCoupage).get(posicion2));
-            descripcion.setText(Arrays.asList(arrayDescripcion).get(posicion2));
-            Glide.with(this).load(imagenes[posicion2]).into(foto);
-            grado.setText(Arrays.asList(arrayGrados).get(posicion2));
-            Glide.with(this).load(R.drawable.pollo).into(logo1);
-            Glide.with(this).load(R.drawable.carne).into(logo2);
-            Glide.with(this).load(R.drawable.jamon).into(logo3);
-            Glide.with(this).load(R.drawable.pato).into(logo4);
-            Glide.with(this).load(R.drawable.pescado).into(logo5);
-            Glide.with(this).load(R.drawable.cheese).into(logo6);
+            Glide.with(getContext()).load(MyApplication.arrayRiojas.get(posicion2).getImagenVino()).into(foto);
 
             return rootView;
         }
@@ -172,7 +151,7 @@ public class RiojaActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return MyApplication.arrayRiojas.size();
         }
 
         @Override
