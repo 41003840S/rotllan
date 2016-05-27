@@ -28,8 +28,6 @@ public class RestaurantesActivity extends FragmentActivity implements OnMapReady
         //Le decimos a Firebase que este sera el contexto
         Firebase.setAndroidContext(getApplication());
 
-
-
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -57,7 +55,7 @@ public class RestaurantesActivity extends FragmentActivity implements OnMapReady
         mMap.setMyLocationEnabled(true);
 
         //Creamos una referencia a nuestra bd de Firebase
-        refRest = new Firebase("https://rotllantorra.firebaseio.com/").child("restaurantes");
+        refRest = new Firebase("https://rotllantorra2.firebaseio.com/").child("restaurantes");
 
         refRest.addValueEventListener(new ValueEventListener() {
             @Override
@@ -79,6 +77,5 @@ public class RestaurantesActivity extends FragmentActivity implements OnMapReady
             }
 
         });
-
     }
 }

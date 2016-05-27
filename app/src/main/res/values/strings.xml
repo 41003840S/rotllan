@@ -28,9 +28,13 @@
     <string name="title_activity_rioja">Rioja</string>
     <string name="title_activity_cava">Cava</string>
     <string name="title_activity_catalunya">Catalunya</string>
+    <string name="title_activity_riasbaixas">Rias Baixas</string>
     <string name="title_activity_varios">Varios</string>
     <string name="title_activity_noticias">Noticias</string>
     <string name="title_activity_contacto">Contacto</string>
+
+    <!-- Main Activity-->
+    <string name="introduccion">Grup Rotllan Torra presenta este catalogo de productos, donde podrás descubrir algunos de sus vinos de una calidad excepcional. </string>
 
     <!-- Contacto Activity -->
     <string name="nombre_jordi">Jordi Rotllan Torra</string>
@@ -51,6 +55,6 @@
     <string name="elaboracion">Elaboración</string>
     <string name="comoServir">Como servir</string>
     <string name="cuandoServir">Cuando servir</string>
-    <string name="title_activity_riasbaixas">RiasbaixasActivity</string>
+
 
 </resources>

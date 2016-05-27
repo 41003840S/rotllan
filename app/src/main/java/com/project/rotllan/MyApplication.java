@@ -36,7 +36,7 @@ public class MyApplication extends Application {
 
         if(Locale.getDefault().getLanguage().equals("es")) {
 
-            Firebase refPriorat = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/priorat");
+            Firebase refPriorat = new Firebase("https://rotllantorra2.firebaseio.com/vinos/do/priorat");
             refPriorat.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -53,7 +53,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refRiojas = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/rioja");
+            Firebase refRiojas = new Firebase("https://rotllantorra2.firebaseio.com/vinos/do/rioja");
             refRiojas.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -70,7 +70,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refCat = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/catalunya");
+            Firebase refCat = new Firebase("https://rotllantorra2.firebaseio.com/vinos/do/catalunya");
             refCat.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -87,7 +87,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refCava = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/cava");
+            Firebase refCava = new Firebase("https://rotllantorra2.firebaseio.com/vinos/do/cava");
             refCava.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -104,7 +104,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refVarios = new Firebase("https://rotllantorra.firebaseio.com/vinos/sindo");
+            Firebase refVarios = new Firebase("https://rotllantorra2.firebaseio.com/vinos/sindo");
             refVarios.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -121,7 +121,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refRias = new Firebase("https://rotllantorra.firebaseio.com/vinos/do/riasbaixas");
+            Firebase refRias = new Firebase("https://rotllantorra2.firebaseio.com/vinos/do/riasbaixas");
             refRias.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -138,11 +138,9 @@ public class MyApplication extends Application {
                 }
             });
 
-            Log.w("TAREA COMPLETADA", "Se ha descargado todo de firebase");
-
         }else{
 
-            Firebase refPriorat = new Firebase("https://rotllantorra.firebaseio.com/vinos/doEN/prioratEN");
+            Firebase refPriorat = new Firebase("https://rotllantorra2.firebaseio.com/vinos/doEN/prioratEN");
             refPriorat.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -159,7 +157,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refRiojas = new Firebase("https://rotllantorra.firebaseio.com/vinos/doEN/riojaEN");
+            Firebase refRiojas = new Firebase("https://rotllantorra2.firebaseio.com/vinos/doEN/riojaEN");
             refRiojas.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -176,7 +174,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refCat = new Firebase("https://rotllantorra.firebaseio.com/vinos/doEN/catalunyaEN");
+            Firebase refCat = new Firebase("https://rotllantorra2.firebaseio.com/vinos/doEN/catalunyaEN");
             refCat.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -193,7 +191,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refRias = new Firebase("https://rotllantorra.firebaseio.com/vinos/doEN/riasbaixasEN");
+            Firebase refRias = new Firebase("https://rotllantorra2.firebaseio.com/vinos/doEN/riasbaixasEN");
             refRias.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -209,7 +207,7 @@ public class MyApplication extends Application {
                 }
             });
 
-            Firebase refCava = new Firebase("https://rotllantorra.firebaseio.com/vinos/doEN/cavaEN");
+            Firebase refCava = new Firebase("https://rotllantorra2.firebaseio.com/vinos/doEN/cavaEN");
             refCava.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
@@ -225,27 +223,26 @@ public class MyApplication extends Application {
                 }
             });
 
-            Log.w("TAREA COMPLETADA", "Se ha descargado todo de firebase");
+            Firebase refVarios = new Firebase("https://rotllantorra2.firebaseio.com/vinos/sindoEN");
+            refVarios.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot snapshot) {
+                    //Recorremos todos los restaurantes que haya en ese momento
+                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                        Vino vino = postSnapshot.getValue(Vino.class);
+                        arrayVarios.add(vino);
+                    }
+                }
+
+                @Override
+                public void onCancelled(FirebaseError firebaseError) {
+                    Log.e("ERROR FIREBASE", String.valueOf(firebaseError));
+                }
+            });
         }
 
-        Firebase refVarios = new Firebase("https://rotllantorra.firebaseio.com/vinos/sindoEN");
-        refVarios.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                //Recorremos todos los restaurantes que haya en ese momento
-                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    Vino vino = postSnapshot.getValue(Vino.class);
-                    arrayVarios.add(vino);
-                }
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-                Log.e("ERROR FIREBASE", String.valueOf(firebaseError));
-            }
-        });
-
         descargado = true;
+        Log.w("TAREA COMPLETADA", "Se ha descargado todo de firebase");
     }
 
     @Override

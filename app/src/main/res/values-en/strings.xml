@@ -32,6 +32,9 @@
     <string name="title_activity_noticias">News</string>
     <string name="title_activity_contacto">Contact</string>
 
+    <!-- Main Activity-->
+    <string name="introduccion">Torra Rotllan Grup presents this product catalog, where you can discover some of its wines of exceptional quality.</string>
+
     <!-- Contacto Activity -->
     <string name="nombre_jordi">Jordi Rotllan Torra</string>
     <string name="cargo">Vins d\'alta qualitat SL</string>
